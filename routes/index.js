@@ -84,7 +84,7 @@ router.use("/send-message", async (req, res) => {
         },
       });
     if (!to || !text)
-      throw new Error("Tujuan dan Pesan Kosong atau Tidak Sesuai");
+      throw new Error("Blank or Incompatible Destinations and Messages");
 
     const receiver = processNumber(to);
     if (!sessionId)
